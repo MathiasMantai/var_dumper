@@ -1,0 +1,18 @@
+{
+    "name": "mmantai/var_dumper",
+    "description": "dump variables with formatting",
+    "keywords": ["dev", "testing", "var", "var_dump", "variables", "dump", "var_dumper"],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mmantai\\VarDumper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mathiasmantai",
+            "email": "mmantaibusiness@gmail.com"
+        }
+    ]
+}
