@@ -3,29 +3,25 @@
 ```php
 use Mmantai\VarDumper\VarDumper;
 
-$test = [
-    "This",
-    "is",
-    "an",
-    "array"
-]
+class Calc
+{
 
-VarDumper::dump($test);
+    public function __construct(public int|float $a, public int|float $b)
+    {
 
-/*
-    output:
-
-    array(4) {
-        [0]=>
-        string(4) "This"
-        [1]=>
-        string(2) "is"
-        [2]=>
-        string(2) "an"
-        [3]=>
-        string(5) "array"
     }
-*/
+    
+    public function add()
+    {
+        return $this->a + $this->b;
+    }
+}
 
+$calc = new Calc(5, 10);
+
+VarDumper::dump($calc);
 ```
 
+### Output
+
+![Example](./screenshots/screenshot_01.png)
