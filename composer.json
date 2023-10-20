@@ -2,6 +2,7 @@
     "name": "mmantai/var_dumper",
     "description": "dump variables with formatting",
     "keywords": ["dev", "testing", "var", "var_dump", "variables", "dump", "var_dumper"],
+    "version": "0.0.1",
     "type": "library",
     "license": "MIT",
     "autoload": {
