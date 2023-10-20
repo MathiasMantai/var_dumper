@@ -1,4 +1,6 @@
-## Example
+## Examples
+
+### Object
 
 ```php
 use Mmantai\VarDumper\VarDumper;
@@ -25,3 +27,25 @@ VarDumper::dump($calc);
 ### Output
 
 ![Example](./screenshots/screenshot_01.png)
+
+
+### Array
+
+```php
+use Mmantai\VarDumper\VarDumper;
+
+$arr = [
+    "This",
+    "is",
+    "an",
+    "array",
+    5,
+    10.0
+];
+
+VarDumper::dump($arr);
+```
+
+### Output
+
+![Example](./screenshots/screenshot_02.png)

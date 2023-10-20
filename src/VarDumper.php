@@ -44,17 +44,25 @@ class VarDumper
 
     public static function displayArrayElements(array $array): string
     {
-        $out = "<tr><td style='width: 100%;'>Array Elements</td></tr>";
+        $out = "";
 
-        foreach ($array as $key => $value) 
+        if(count($array ) > 0)
         {
-            $out .= "<tr>";
+            $out = "<table width='100%;'><tr><td style='text-decoration: underline;'>Elements</td></tr>";
 
-            $out .= "<td style='text-align:center;'>{$key}</td>";
+            foreach ($array as $key => $value) 
+            {
+                $out .= "<tr style='border-bottom: 1px solid black;'>";
 
-            $out .= "<td style='text-align:center;'>{$value}</td>";
+                $type = gettype($value);
+                $out .= "<td style='text-align:left;'>{$key} ({$type})</td>";
 
-            $out .= "</tr>";
+                $out .= "<td style='text-align:right;'>{$value}</td>";
+
+                $out .= "</tr>";
+            }
+
+            $out .= "</table>";
         }
 
         return $out;
