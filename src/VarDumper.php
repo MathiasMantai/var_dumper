@@ -13,7 +13,7 @@ class VarDumper
         {
             case "array": 
                 {
-                    $out .= self::displayArrayElements($var);
+                    $out .= self::displayArrayData($var);
                 }
             break;
             case "object":
@@ -40,13 +40,31 @@ class VarDumper
             } 
         } 
         return false;  
-    } 
+    }
+
+    public static function displayArrayData(array $array): string
+    {
+        $out = self::displayArrayLength($array);
+        $out .= "<br />";
+        $out .= self::displayArrayElements($array); 
+        return $out;
+    }
+
+    public static function displayArrayLength(array $array): string
+    {
+        $cnt = count($array);
+        $out = "<table width='100%;'>";
+        $out .= "<tr><td style='text-align: left;'>Length:</td><td style='text-align: right;'>{$cnt}</td></tr>";
+        $out .= "</table>";
+
+        return $out;
+    }
 
     public static function displayArrayElements(array $array): string
     {
         $out = "";
 
-        if(count($array ) > 0)
+        if(count($array) > 0)
         {
             $out = "<table width='100%;'><tr><td style='text-decoration: underline;'>Elements</td></tr>";
 
